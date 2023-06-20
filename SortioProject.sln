@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33617.297
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sortio", "Sortio\Sortio.csproj", "{421F07CC-8A0D-4B93-AD60-FF5FF499DB20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{421F07CC-8A0D-4B93-AD60-FF5FF499DB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{421F07CC-8A0D-4B93-AD60-FF5FF499DB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{421F07CC-8A0D-4B93-AD60-FF5FF499DB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{421F07CC-8A0D-4B93-AD60-FF5FF499DB20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52BCBA34-D4D3-4882-B19B-C953C3CAEEC0}
+	EndGlobalSection
+EndGlobal
