@@ -26,12 +26,11 @@
         /// Sorts the entire list using the specified sorter, with a specified comparer and stability option.
         /// </summary>
         /// <param name="list">The list to be sorted.</param>
-        /// <param name="metrics">Output sorting metrics, such as elapsed time, number of comparisons, and swaps.</param>
         /// <param name="comparer">Custom comparer for comparing elements. If null, default comparer is used.</param>
         /// <param name="stable">Whether the sort should be stable (true) or not (false).</param>
-        public void Sort(IList<T> list, out SortingMetrics metrics,
+        public void Sort(IList<T> list,
             IComparer<T> comparer = null, bool stable = false) => 
-            _sorter.Sort(list, out metrics, comparer, stable);
+            _sorter.Sort(list, comparer, stable);
 
         /// <summary>
         /// Sorts a range within the list using the specified sorter, with a specified comparer and stability option.
@@ -39,22 +38,20 @@
         /// <param name="list">The list containing the range to be sorted.</param>
         /// <param name="startIndex">The starting index of the range to sort.</param>
         /// <param name="count">The number of elements in the range to sort.</param>
-        /// <param name="metrics">Output sorting metrics, such as elapsed time, number of comparisons, and swaps.</param>
         /// <param name="comparer">Custom comparer for comparing elements. If null, default comparer is used.</param>
         /// <param name="stable">Whether the sort should be stable (true) or not (false).</param>
         public void SortRange(IList<T> list, int startIndex, int count,
-            out SortingMetrics metrics, IComparer<T> comparer = null, bool stable = false) => 
-            _sorter.SortRange(list, startIndex, count, out metrics, comparer, stable);
+            IComparer<T> comparer = null, bool stable = false) => 
+            _sorter.SortRange(list, startIndex, count, comparer, stable);
 
         /// <summary>
         /// Sorts the entire list in parallel using the specified sorter, with a specified comparer and stability option.
         /// </summary>
         /// <param name="list">The list to be sorted.</param>
-        /// <param name="metrics">Output sorting metrics, such as elapsed time, number of comparisons, and swaps.</param>
         /// <param name="comparer">Custom comparer for comparing elements. If null, default comparer is used.</param>
         /// <param name="stable">Whether the sort should be stable (true) or not (false).</param>
-        public void ParallelSort(IList<T> list, out SortingMetrics metrics,
+        public void ParallelSort(IList<T> list,
             IComparer<T> comparer = null, bool stable = false) => 
-            _sorter.ParallelSort(list, out metrics, comparer, stable);
+            _sorter.ParallelSort(list, comparer, stable);
     }
 }
