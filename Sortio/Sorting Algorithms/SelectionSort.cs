@@ -213,10 +213,9 @@
 
         /// <summary>
         /// Sorts the entire list in parallel using the specified comparer and stability option.
-        /// Note: Parallel sorting is not implemented for QuickSort in this example.
         /// </summary>
         /// <param name="list">The list to be sorted.</param>
-        /// <param name="comparer">Custom comparer for comparing elements. Ifnull, default comparer is used.</param>
+        /// <param name="comparer">Custom comparer for comparing elements. If null, default comparer is used.</param>
         /// <param name="stable">Whether the sort should be stable (true) or not (false). Note: QuickSort is not stable.</param>
         public void ParallelSort(IList<T> list, int parallelThreshold = 1000, IComparer<T> comparer = null, bool stable = false)
         {
