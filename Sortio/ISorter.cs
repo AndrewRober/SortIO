@@ -30,6 +30,6 @@
         /// <param name="list">The list to be sorted.</param>
         /// <param name="comparer">Custom comparer for comparing elements. If null, default comparer is used.</param>
         /// <param name="stable">Whether the sort should be stable (true) or not (false).</param>
-        void ParallelSort(IList<T> list, IComparer<T> comparer = null, bool stable = false);
+        void ParallelSort(IList<T> list, int parallelThreshold, IComparer<T> comparer = null, bool stable = false);
     }
 }

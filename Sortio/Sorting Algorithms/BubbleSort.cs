@@ -33,8 +33,33 @@
         /// <param name="list">The list to be sorted.</param>
         /// <param name="comparer">Custom comparer for comparing elements. If null, default comparer is used.</param>
         /// <param name="stable">Whether the sort should be stable (true) or not (false). Note: Bubble sort is always stable.</param>
-        public void Sort(IList<T> list, IComparer<T> comparer = null, bool stable = false) =>
-            SortRange(list, 0, list.Count, comparer, stable);
+        public void Sort(IList<T> list, IComparer<T> comparer = null, bool stable = false)
+        {
+            if (list == null)
+                throw new ArgumentNullException(nameof(list));
+
+            if (comparer == null)
+                comparer = Comparer<T>.Default;
+
+            bool swapped;
+            int n = list.Count;
+
+            do
+            {
+                swapped = false;
+                for (int i = 1; i < n; i++)
+                {
+                    if (comparer.Compare(list[i - 1], list[i]) > 0)
+                    {
+                        T temp = list[i - 1];
+                        list[i - 1] = list[i];
+                        list[i] = temp;
+                        swapped = true;
+                    }
+                }
+                n--;
+            } while (swapped);
+        }
 
         /// <summary>
         /// Sorts a range within the list using the specified comparer and stability option.
